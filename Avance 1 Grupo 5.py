@@ -22,7 +22,7 @@ while(ejecucionPrograma):
     print("1. Reportar una actividad sospechosa.")
     print("2. No reportar una actividad sospechosa.")
     print("3. Salir.")
-    valorUsuario = input("Ingrese una opccion: ")
+    valorUsuario = input("Ingrese una opción: ")
 
     if (valorUsuario == "1"):
         print("---------- Opción 1 ----------")
@@ -37,7 +37,7 @@ while(ejecucionPrograma):
             print("---------- Menu opción 1.1 ----------")
             print("1. Reportar un herido")
             print("2. No hay heridos")
-            valorUsuarioOpcion1 = input("Ingrese una opccion: ")
+            valorUsuarioOpcion1 = input("Ingrese una opción: ")
 
             if(valorUsuarioOpcion1 == "1"):
                 print("Se hace un llamado por una ambulancia")
@@ -51,32 +51,32 @@ while(ejecucionPrograma):
                 print("---------- Error ----------")
                 print("La opción ingresada '" + valorUsuarioOpcion1 + "' no es valida")
                 
-        print("Se va llamar a la fuerza publica")
-        reporte["llamadoFuerzaPublica"] = "Se hace un llamado a la fuerza publica"
+        print("Se va a llamar a la fuerza pública")
+        reporte["llamadoFuerzaPublica"] = "Se hace un llamado a la fuerza pública"
         
         opcionesCorrecta = False
 
         while(opcionesCorrecta== False):
             print("---------- Menu opción 1.2 ----------")
-            print("1. La sitacion es peligrosa")
-            print("2. La sitacion no es peligrosa")
-            valorUsuarioOpcion1 = input("Ingrese una opccion: ")
+            print("1. La situación es peligrosa")
+            print("2. La situación no es peligrosa")
+            valorUsuarioOpcion1 = input("Ingrese una opción: ")
 
             if(valorUsuarioOpcion1 == "1"):
-                print("Favor busacar refujio hasta que la situacuion no sea peligrosa")
-                reporte["sitacionPeligrosa"] = "Se busco un refujio por situacion peligrosa"
+                print("Favor buscar refugio hasta que la situación no sea peligrosa")
+                reporte["sitacionPeligrosa"] = "Se busco un refujio por situación peligrosa"
                 opcionesCorrecta = True
             elif(valorUsuarioOpcion1 == "2"):
-                reporte["sitacionPeligrosa"] = "No se busco un refujio por situacion peligrosa"
+                reporte["sitacionPeligrosa"] = "No se busco un refujio por situación peligrosa"
                 opcionesCorrecta = True
             else:
                 print("---------- Error ----------")
                 print("La opción ingresada '" + valorUsuarioOpcion1 + "' no es valida")
 
         print("Favor Alejarse del lugar")
-        reporte["alejarseDelLugar"] = "La persona que reporto se alejo del lugar"
+        reporte["alejarseDelLugar"] = "La persona que reporto se alejó del lugar"
 
-        print("---------Resummen del reporte ---------")
+        print("--------- Resumen del reporte ---------")
         print("")
         
         for  elemento in reporte.values():
@@ -86,9 +86,11 @@ while(ejecucionPrograma):
               
     elif(valorUsuario == "2" ):
         print("---------- Opción 2 ----------")
-        print("No se genera ningun reporte")
+        print("No se genera ningún reporte")
+
     elif(valorUsuario == "3" ):
         ejecucionPrograma = False
+
     else:
         print("---------- Error ----------")
         print("La opción ingresada '" + valorUsuario + "' no es valida")
